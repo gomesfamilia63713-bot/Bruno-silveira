@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.register_punch_by_token(text, text, timestamptz, text, double precision, double precision, text, text, text, text, text, text, text, text, integer) FROM PUBLIC, anon, authenticated;
+GRANT EXECUTE ON FUNCTION public.register_punch_by_token(text, text, timestamptz, text, double precision, double precision, text, text, text, text, text, text, text, text, integer) TO service_role;

@@ -1,0 +1,1 @@
+ALTER FUNCTION public.approve_material_request(uuid) SECURITY INVOKER;

@@ -1,0 +1,1 @@
+DROP TRIGGER IF EXISTS trg_sync_item_price ON public.items;

@@ -1,0 +1,90 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790127789318,
+      "tag": "0000_restore_public_photo_punch_registration",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790765502612,
+      "tag": "0001_atomic_mobile_inventory_reassignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790765523636,
+      "tag": "0002_fix_atomic_mobile_inventory_reassignment_lock",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790850092079,
+      "tag": "0003_fix_mobile_assignment_movement_kind",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790954630095,
+      "tag": "0004_add_paused_mobile_inventory_assignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790990414032,
+      "tag": "0005_add_paused_mobile_inventory_assignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1791163029331,
+      "tag": "0006_inventory_lifecycle_and_obra_transfer",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1791334794356,
+      "tag": "0007_release_discarded_codes",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1791422557012,
+      "tag": "0008_enforce_unique_inventory_code_reservations",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1791512228540,
+      "tag": "0009_shared_inventory_alert_resolution",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1791684132808,
+      "tag": "0010_production_participants_realtime",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1791887170313,
+      "tag": "0011_epi_inventory_and_atomic_events",
+      "breakpoints": true
+    }
+  ]
+}

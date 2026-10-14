@@ -1,0 +1,1 @@
+ALTER TABLE public.obra_extras ADD COLUMN IF NOT EXISTS purchase_date date DEFAULT CURRENT_DATE;

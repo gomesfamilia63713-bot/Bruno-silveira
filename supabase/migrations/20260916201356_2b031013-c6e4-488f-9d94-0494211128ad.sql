@@ -1,0 +1,2 @@
+REVOKE ALL ON FUNCTION public.create_material_request_by_token(text, text, jsonb, text, text, uuid) FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.create_material_request_by_token(text, text, jsonb, text, text, uuid) TO anon, authenticated, service_role;

@@ -1,0 +1,97 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Bebas Neue", Impact, system-ui, sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+}
+
+:root {
+  --radius: 0.5rem;
+  /* Industrial dark — oficina/garagem */
+  --background: oklch(0.18 0.015 245);
+  --foreground: oklch(0.93 0.005 240);
+  --card: oklch(0.24 0.025 245);
+  --card-foreground: oklch(0.93 0.005 240);
+  --popover: oklch(0.22 0.025 245);
+  --popover-foreground: oklch(0.93 0.005 240);
+  --primary: oklch(0.78 0.16 70);          /* amber industrial */
+  --primary-foreground: oklch(0.18 0.015 245);
+  --secondary: oklch(0.28 0.028 245);
+  --secondary-foreground: oklch(0.93 0.005 240);
+  --muted: oklch(0.26 0.025 245);
+  --muted-foreground: oklch(0.68 0.015 245);
+  --accent: oklch(0.32 0.04 70);
+  --accent-foreground: oklch(0.93 0.005 240);
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  --success: oklch(0.7 0.16 145);
+  --success-foreground: oklch(0.15 0.02 245);
+  --border: oklch(0.32 0.025 245);
+  --input: oklch(0.28 0.025 245);
+  --ring: oklch(0.78 0.16 70);
+}
+
+.dark { color-scheme: dark; }
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+  /* Alvos de toque confortáveis no celular */
+  @media (max-width: 767px) {
+    button, [role="button"], a[role="menuitem"], select, [role="tab"] { min-height: 40px; }
+    input, textarea, select { font-size: 16px; } /* evita zoom automático no iOS */
+    table { font-size: 0.8125rem; }
+  }
+  /* Tabelas nunca quebram o layout: rolagem apenas dentro do container */
+  table { max-width: 100%; }
+  body {
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, color-mix(in oklab, var(--primary) 12%, transparent), transparent),
+      linear-gradient(180deg, var(--background), var(--background));
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.01em; }
+  @media print {
+    @page { size: A4; margin: 14mm; }
+    body { background: white !important; color: black !important; }
+    .no-print, [data-sidebar], aside, nav, header button, [role="navigation"] { display: none !important; }
+    main, .print-area { width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+  }
+}

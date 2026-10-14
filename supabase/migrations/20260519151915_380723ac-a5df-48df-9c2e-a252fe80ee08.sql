@@ -1,0 +1,1 @@
+ALTER TABLE public.movements ADD COLUMN obra text;

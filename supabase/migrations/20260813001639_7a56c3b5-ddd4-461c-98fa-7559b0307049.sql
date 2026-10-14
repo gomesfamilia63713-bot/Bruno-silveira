@@ -1,0 +1,2 @@
+ALTER TABLE public.material_requests ADD COLUMN IF NOT EXISTS client_id uuid;
+CREATE UNIQUE INDEX IF NOT EXISTS material_requests_client_id_key ON public.material_requests (client_id) WHERE client_id IS NOT NULL;
