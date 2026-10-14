@@ -1,0 +1,10 @@
+{
+  "short_name": "EquipMaster",
+  "name": "Equip Master App",
+  "icons": [],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "description": "Aplicativo de Gestão"
+}
